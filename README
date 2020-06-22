@@ -1,5 +1,3 @@
-SERBOI Florea-Dan - Grupa 315CB
-Punctajul obtinut la teste pe calculatorul propriu este de 105p.
 Tema contine 2 fisiere sursa: main.c si utils.c si un fisier header: utils.h.
 In fisierul sursa utils.c sunt implementate functiile. Ele vor fi apelate in
 main.c, unde se citeste fiecare operatie din fisierul input.in, linie cu linie
