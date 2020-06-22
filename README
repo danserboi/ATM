@@ -1,0 +1,50 @@
+SERBOI Florea-Dan - Grupa 315CB
+Punctajul obtinut la teste pe calculatorul propriu este de 105p.
+Tema contine 2 fisiere sursa: main.c si utils.c si un fisier header: utils.h.
+In fisierul sursa utils.c sunt implementate functiile. Ele vor fi apelate in
+main.c, unde se citeste fiecare operatie din fisierul input.in, linie cu linie
+si se extrag parametri operatiei.
+In main.c avem declarate variabile pentru lista de carduri (LC), numarul maxim
+de carduri (max_no) - citit de la inceputul fisierului input.in, si pozitia
+maxima din cadrul unei liste (ultima sublista nevida - care contine carduri)
+(max_pos). Aceste variabile se modifica pe parcurs, dupa efectuarea
+operatiilor.
+In header-ul utils.h avem definite tipurile pentru istoric, card si sublista,
+sub forma de celula, lista si adresa lista si intalnim antetele functiilor
+din fisierul utils.c. De mentionat: o sublista este o lista cu un singur
+element ( al carei camp next_sub indica catre NULL).
+Primele functii implementate in fisierul utils.c sunt cele de alocare si de
+dezalocare pentru istoric, card, sublista si lista unde se aloca cate un
+element de tipul amintit si se completeaza cu campurile informatie sau se
+distruge tot.
+In caz de esec pentru alocare, se afiseaza un mesaj la stderr.
+Alte functii implementate sunt add_history si add_card, care adauga o operatie
+ in istoricul unui card, respectiv un card intr-o sublista.
+Sunt prezente functiile de afisare pentru istoric, card, sublista si lista de
+forma "show_x".
+Functia card_digits_sum calculeaza suma cifrelor numarului unui card.
+Functia sublist_from_position returneaza sublista de pe o anumita pozitie din
+cadrul listei.
+Functia search_card cauta un card in lista si il returneaza.
+Functia delete_card sterge un card dintr-o lista, returneaza 1/0 pentru esec.
+Functia reverse_transaction anuleaza o tranzactie, daca este posibil.
+Functia unblock_card deblocheaza un card, numarul de incercari se reseteaza
+la 0.
+Functia redimensioning_list redimensioneaza o lista, se creaza o lista cu
+numar dublu de elemente pe care o returneaza in care se adauga cardurile
+listei vechi. Lista veche se dezaloca.
+Functia insert_card insereaza un card in bancomat. Daca nu reuseste,
+afiseaza mesajele de insucces cerute.
+Functia recharge alimenteaza un card cu o anumita suma de bani, multiplu de 10.
+Se afiseaza daca suma nu e multiplu de 10.
+Prin functia cash_withdrawal se scoate o suma de bani de pe card, multiplu de
+10, daca e posibil. Se afiseaza mesajul cerut.
+Prin functia balance_inquiry se verifica soldul de pe card, se afiseaza acest
+sold.
+Prin functia transfer_funds se transfera o suma de pe un card pe altul, daca
+este posibil. Se afiseaza mesajele cerute, in caz de insucces.
+Functia pin_change schimba pinul unui card si starea sa devine "ACTIVE", daca
+pinul este introdus corect.
+Prin functia cancel se scoate cardul din bancomat.
+Ultima functie implementata, extract_parameters, extrage parametri unei
+operatii.
